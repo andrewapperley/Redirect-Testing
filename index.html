@@ -1,0 +1,10 @@
+<script>
+    window.addEventListener('load', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const redirectUrl = urlParams.get('redirect');
+        document.body.innerHTML = '<h1>Redirecting to ' + redirectUrl + '</h1>';
+        if (redirectUrl) {
+            window.location.href = redirectUrl;
+        }
+    });
+</script>
